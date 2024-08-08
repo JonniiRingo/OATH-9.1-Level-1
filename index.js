@@ -29,20 +29,19 @@ app.get("/register", (req, res) => {
 });
 
 
-
-
-// These are the two methods you need to define bruh.
-// Dont confuse get methods with post methods let this be your lesson
 app.post("/register", async (req, res) => {
   const email = req.body.username;
   const password = req.body.password;
-  // Use the pg query to create a new user and then insert them into the database
   try{
-    await db.query("INSERT INTO secrets (username, password) VALUES ($1, $2)", [email, password]);
+    const result = await db.query(
+    "INSERT INTO users (email, password) VALUES ($1, $2)", 
+    [email, password]);
+    console.log(result);
+    res.render("secrets.ejs");
+  
   } catch(err){
     console.log(err);
   }
-  res.render("secrets.ejs");
 });
 
 app.post("/login", async (req, res) => {
