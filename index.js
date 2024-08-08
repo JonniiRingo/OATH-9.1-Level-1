@@ -19,6 +19,11 @@ app.get("/register", (req, res) => {
   res.render("register.ejs");
 });
 
+
+
+
+// These are the two methods you need to define bruh.
+// Dont confuse get methods with post methods let this be your lesson
 app.post("/register", async (req, res) => {});
 
 app.post("/login", async (req, res) => {});
