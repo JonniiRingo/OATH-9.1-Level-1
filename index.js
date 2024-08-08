@@ -24,9 +24,19 @@ app.get("/register", (req, res) => {
 
 // These are the two methods you need to define bruh.
 // Dont confuse get methods with post methods let this be your lesson
-app.post("/register", async (req, res) => {});
+app.post("/register", async (req, res) => {
+  var password = req.body.password;
+  var username = req.body.username;
+  console.log(username);
+  console.log(password);
+});
 
-app.post("/login", async (req, res) => {});
+app.post("/login", async (req, res) => {
+  var password = req.body.password;
+  var username = req.body.username;
+  console.log(username);
+  console.log(password);
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
