@@ -29,6 +29,7 @@ app.post("/register", async (req, res) => {
   var username = req.body.username;
   console.log(username);
   console.log(password);
+  res.render("secrets.ejs");
 });
 
 app.post("/login", async (req, res) => {
@@ -36,6 +37,7 @@ app.post("/login", async (req, res) => {
   var username = req.body.username;
   console.log(username);
   console.log(password);
+  res.render("secrets.ejs");
 });
 
 app.listen(port, () => {
