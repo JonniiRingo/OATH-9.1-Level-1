@@ -13,27 +13,15 @@ app.get("/", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login.ejs");
-  consol.log
 });
 
 app.get("/register", (req, res) => {
   res.render("register.ejs");
 });
 
-app.post("/register", async (req, res) => {
-  var password = req.body.password;
-  var username = req.body.username;
-  console.log(password);
-  console.log(username);
-  res.render("secrets.ejs")
-});
+app.post("/register", async (req, res) => {});
 
-app.post("/login", async (req, res) => {
-  var password = req.body.password;
-  var username = req.body.username;
-  console.log(password);
-  console.log(username); 
-});
+app.post("/login", async (req, res) => {});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
